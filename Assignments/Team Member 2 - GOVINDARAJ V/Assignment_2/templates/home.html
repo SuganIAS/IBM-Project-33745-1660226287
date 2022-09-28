@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+HomePage
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="card text-center my-3 mx-auto w-75">
+        <div class="card-header bg-primary text-white">
+          Want job in your core field ? Register Here...!
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">For ECE only ✔</h5>
+          <p class="card-text">Let's Learn Together ✌</p>
+          <a href="{{url_for('signuppage')}}" class="btn btn-success">Register</a>
+        </div>
+        <div class="card-footer bg-primary text-white">
+          Arambikkalama...
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+HomePage
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="card text-center my-3">
+        <div class="card-header">
+          About Me..!
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Interested in VLSI Design and Graphic Design</h5>
+          <p class="card-text">Want to Connect with me ?</p>
+          <a href="{{url_for('signuppage')}}" class="btn btn-primary">CLICK HERE</a>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

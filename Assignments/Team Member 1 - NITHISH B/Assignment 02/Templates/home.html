@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+HomePage
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="card text-center my-3">
+        <div class="card-header">
+          About Me..!
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Doing C course</h5>
+          <p class="card-text">I love to solve problems. That's why I am learning C right now. To know more 👇</p>
+          <a href="{{url_for('signuppage')}}" class="btn btn-success">Click Here</a>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

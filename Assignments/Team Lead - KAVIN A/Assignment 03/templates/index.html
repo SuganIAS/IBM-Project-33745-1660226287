@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+   <head>
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Assignment-03</title>
+         <link rel="stylesheet" href="https://projectfilesholder.s3.jp-tok.cloud-object-storage.appdomain.cloud/styles.css">
+         <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "1b54cdce-b671-4d20-a08f-73904841fa14", // The ID of this integration.
+              region: "eu-gb", // The region your integration is hosted in.
+              serviceInstanceID: "19a1865e-d615-4374-af5a-8994231a7e9f", // The ID of your service instance.
+              onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+          </script>
+      </head>
+   <body>
+      <h1>IBM Object Storage</h1>
+      {% for row in files %}
+         <div>
+            <h3>Filename : {{row}} </h3>
+            <img src="https://projectholder.s3.jp-tok.cloud-object-storage.appdomain.cloud/{{row}}"></td>
+         </div>
+      {% endfor %}
+   </body>
+</html>

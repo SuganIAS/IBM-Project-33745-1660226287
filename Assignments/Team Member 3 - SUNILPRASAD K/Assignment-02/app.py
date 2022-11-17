@@ -25,9 +25,14 @@ def loginpage():
         password = request.form['password']
         if((email and password) ):
             sql = "SELECT * FROM signup WHERE email = 'email'"
-            stmt = ibm_db.exec_immediate(conn, sql)
+            stmt = ibm_db.prepare(conn, sql)
+            ibm_db.exec_immediate(stmt)
 
-            if(ibm_db.fetch_row(stmt)):
+            rows = ibm_db.num_rows(stmt)
+
+            #if(ibm_db.fetch_row(stmt)):
+            if(rows>0):
+
                 row = ibm_db.fetch_both(stmt)
 
                 if(row['email'] == email and row['password'] == password):

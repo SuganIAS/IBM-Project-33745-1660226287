@@ -5,6 +5,7 @@ HomePage
 {% endblock %}
 
 {% block content %}
+{{ msg }}
 <div class="container">
     <div class="card text-center my-3">
         <div class="card-header">
@@ -13,7 +14,7 @@ HomePage
         <div class="card-body">
           <h5 class="card-title">Want to achieve your goal 🎯</h5>
           <p class="card-text">Then, Register..!</p>
-          <a href="{{url_for('signuppage')}}" class="btn btn-success">Sign Up</a>
+          <a href="/signup" class="btn btn-success">Sign Up</a>
         </div>
         <div class="card-footer text-muted">
           Only 5 days to go. Hurry Up!!!
@@ -22,12 +23,12 @@ HomePage
 
     <div class="card text-center my-3">
         <div class="card-header">
-          Login to get latest updates.
+          Login to get latest update
         </div>
         <div class="card-body">
           <h5 class="card-title">Hey! Nice to meet you again 😊</h5>
           <p class="card-text">Why are you waiting, Login Now!</p>
-          <a href="{{url_for('signinpage')}}" class="btn btn-primary">Sign In</a>
+          <a href="/signin" class="btn btn-primary">Sign In</a>
         </div>
         <div class="card-footer text-muted">
           Amazing stuff waiting for you.

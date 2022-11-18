@@ -5,19 +5,20 @@ Sign Up Page
 {% endblock %}
 
 {% block content %}
-<h1 class="container p-4 my-3 bg-success text-white h3">Sign up to connect with me</h1>
+<h1 class="container p-4 my-3 bg-primary text-white h3">Sign up to enter into my community 😎</h1>
 <div class="container">
-    <form class="row g-3 my-3">
+  {{ smsg }}
+    <form action = "{{ url_for('signinrec') }}" method = "POST" class="row g-3 my-3">
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
+          <input type="email" name="email" class="form-control" id="inputEmail4">
         </div>
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Create Password</label>
-          <input type="password" class="form-control" id="inputPassword4">
+          <input type="password" name="password" class="form-control" id="inputPassword4">
         </div>
         <div class="col-12">
-          <button type="submit" class="btn btn-success">Sign in</button>
+          <button type="submit"name="submit" class="btn btn-primary">Sign up</button>
         </div>
       </form>
 </div>

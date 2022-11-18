@@ -5,17 +5,34 @@ HomePage
 {% endblock %}
 
 {% block content %}
+{{ msg }}
 <div class="container">
     <div class="card text-center my-3">
         <div class="card-header">
-          About Me..!
+          Register to light your life.
         </div>
         <div class="card-body">
-          <h5 class="card-title">Interested in VLSI Design and Graphic Design</h5>
-          <p class="card-text">Want to Connect with me ?</p>
-          <a href="{{url_for('signuppage')}}" class="btn btn-primary">CLICK HERE</a>
+          <h5 class="card-title">Want to achieve your goal 🎯</h5>
+          <p class="card-text">Then, Register..!</p>
+          <a href="/signup" class="btn btn-success">Sign Up</a>
+        </div>
+        <div class="card-footer text-muted">
+          Only 5 days to go. Hurry Up!!!
         </div>
     </div>
-  </div>
+
+    <div class="card text-center my-3">
+        <div class="card-header">
+          Login to get latest update
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Hey! Nice to meet you again 😊</h5>
+          <p class="card-text">Why are you waiting, Login Now!</p>
+          <a href="/signin" class="btn btn-primary">Sign In</a>
+        </div>
+        <div class="card-footer text-muted">
+          Amazing stuff waiting for you.
+        </div>
+    </div>
 </div>
 {% endblock %}
